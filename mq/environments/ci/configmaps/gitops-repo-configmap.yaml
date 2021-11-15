@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: multi-tenancy-gitops
+    group: pipeline
+    type: git
+  name: gitops-repo
+data:
+  branch: master
+  host: github.com
+  org: prod-ref-guides
+  owner: prod-ref-guides
+  parentdir: .
+  protocol: https
+  repo: multi-tenancy-gitops-apps
+  url: https://github.com/prod-ref-guides/multi-tenancy-gitops-apps.git
