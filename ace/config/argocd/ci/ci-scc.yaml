@@ -1,24 +1,27 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ci-scc
-  annotations:
-    argocd.argoproj.io/sync-wave: "250"
-  labels:
-    gitops.tier.group: cntk
-    gitops.tier.layer: applications
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ci
-    server: https://kubernetes.default.svc
-  project: applications
-  source:
-    path: shared/config/ci/instances/scc
-    repoURL: https://github.com/prod-ref-guides/multi-tenancy-gitops-apps.git
-    targetRevision: master
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+## Note: When installed along with MQ Folder in this repo, ArgoCD complains 
+## Shared Resource Warning: Application/ci-scc is part of applications apps-ace-ci and apps-mq-ci
+ 
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: ci-scc
+#   annotations:
+#     argocd.argoproj.io/sync-wave: "250"
+#   labels:
+#     gitops.tier.group: cntk
+#     gitops.tier.layer: applications
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: ci
+#     server: https://kubernetes.default.svc
+#   project: applications
+#   source:
+#     path: shared/config/ci/instances/scc
+#     repoURL: https://github.com/prod-ref-guides/multi-tenancy-gitops-apps.git
+#     targetRevision: master
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
