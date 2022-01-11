@@ -13,8 +13,8 @@ spec:
   project: applications
   source:
     path: mq/environments/tools/
-    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
-    targetRevision: master
+    repoURL: https://github.com/prod-ref-guides/multi-tenancy-gitops-apps.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true

@@ -13,6 +13,6 @@ spec:
   project: applications
   source:
     path: pm/environments/classic
-    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
-    targetRevision: master
+    repoURL: https://github.com/prod-ref-guides/multi-tenancy-gitops-apps.git
+    targetRevision: main
   syncPolicy: {}
